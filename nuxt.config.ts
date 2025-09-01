@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
 
   css: [
-    '../assets/css/reset.css'
+    '../app/assets/css/reset.css'
   ],
 })
 

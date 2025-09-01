@@ -6,40 +6,40 @@
 
         <div class="div-btn-seta-aside" :class="{ ativo: isActive }">
             <button class="btn-seta-aside" @click="toggleAside" :class="{ ativo: isActive }">
-                >
+                <
             </button>
         </div>
 
         <ul class="lista-aside" :class="{ ativo: isActive }">
             <li>
-               <NuxtLink class="link-aside" to="#" :class="{ ativo: isActive }">
+               <NuxtLink class="link-aside" to="/" :class="{ ativo: isActive }">
                 <img src="../assets/img/menu.png" alt="">
-                <span>Dashboard</span>
+                Dashboard
                 </NuxtLink>
             </li>
             <li>
-               <NuxtLink class="link-aside" to="#" :class="{ ativo: isActive }">
+               <NuxtLink class="link-aside" to="/portfolio" :class="{ ativo: isActive }">
                 <img src="../assets/img/activity.png" alt="">
-                <span>Dashboard</span>
+                Portfólio
                 </NuxtLink>
             </li>
             <li>
-               <NuxtLink class="link-aside" to="#" :class="{ ativo: isActive }">
+               <NuxtLink class="link-aside" to="/trading" :class="{ ativo: isActive }">
                 <img src="../assets/img/trade.png" alt="">
-                <span>Dashboard</span>
+                Trading
                 </NuxtLink>
             </li>
             <li>
-               <NuxtLink class="link-aside" to="#" :class="{ ativo: isActive }">
+               <NuxtLink class="link-aside" to="/wallet" :class="{ ativo: isActive }">
                 <img src="../assets/img/wallet-2.png" alt="">
-                <span>Dashboard</span>
+                Wallet
                 </NuxtLink>
             </li>
         </ul>
 
         <button class="btn-sair-aside" :class="{ ativo: isActive }">
             <img src="../assets/img/logout.png" alt="">
-            <span :class="{ ativo: isActive }">Logout</span>
+            Logout
         </button>
     </aside>
 </template>
@@ -73,7 +73,8 @@ aside {
     grid-template-rows: 20% auto 20%;
     background-color: #101111;
     border-radius: 0 20px 20px 0;
-    transition: width ease 1s;
+    z-index: 2;
+    transition: width 1s;
 }
 
 .logo {
@@ -89,6 +90,7 @@ aside {
 }
 
 .lista-aside {
+    max-width: 250px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -97,18 +99,26 @@ aside {
 }
 
 .link-aside {
-   max-width: 150px;
-   height: 38px;
+   width: 150px;
+   height: 40px;
    display: flex;
    align-items: center;
    gap: 10px;
    border-radius: 30px;
    padding: 0 0 0 3px;
    color: white;
+   overflow: hidden;
+   border: 2px solid transparent;
    transition: all 1s;
 }
 
 .link-aside:hover {
+    background-color: white;
+    color: black;
+}
+
+.link-aside.router-link-active {
+    border: 2px solid #77ED91;
     background-color: white;
     color: black;
 }
@@ -151,7 +161,7 @@ aside > .btn-sair-aside:hover {
 @media (max-width: 800px) {
 
     aside.ativo {
-        width: 50px;
+        width: 55px;
     }
 
     .logo {
@@ -188,19 +198,17 @@ aside > .btn-sair-aside:hover {
     }
 
     .lista-aside.ativo {
-        padding: 0 5px 0 5px;
-        overflow: hidden;
+        padding: 0 0 0 7px;
     }
 
-    .lista-aside > li > .link-aside.ativo {
-        min-width: 40px;
-        padding: 0 0 0 4px;
+    .link-aside.ativo {
+        width: 42px;
     }
 
-    aside > .btn-sair-aside.ativo {
+    .btn-sair-aside.ativo {
         width: 30px;
         height: 30px;
-        margin: 0 0 0 10px;
+        margin: 0 0 0 13px;
         overflow: hidden;
     }
 

@@ -1,20 +1,16 @@
 <template>
-    <main>
-      <SideBar/>
-    </main>
+  
+  <NuxtLayout>
+  <NuxtPage/>
+  </NuxtLayout>
+
 </template>
 
-<script setup>
-
-import SideBar from '../components/Sidebar.vue'
+<script>
 
 </script>
 
-<style scoped>
-
-main {
-  height: 100vh;
-}
+<style>
 
 </style>
 
