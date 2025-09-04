@@ -1,9 +1,7 @@
 <template>
     <main>
         <SideBar/>
-        <section>
-            <slot></slot>
-        </section>
+        <slot></slot>
     </main>
 </template>
 
@@ -16,18 +14,10 @@ import SideBar from '../components/Sidebar.vue'
 <style scoped>
 
 main {
+    width: 100%;
     height: 100vh;
     display: flex;
-}
-
-@media (max-width: 800px) {
-
-main > section {
-    padding-left: 60px;
-    position: fixed;
-    z-index: 1;
-}
-
+    background-color: black;
 }
 
 </style>

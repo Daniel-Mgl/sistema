@@ -6,11 +6,11 @@
 
 </template>
 
-<script>
+<script setup>
 
 </script>
 
-<style>
+<style scoped>
 
 </style>
 
