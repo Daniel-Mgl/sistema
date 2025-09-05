@@ -5,7 +5,7 @@
 
             <div class="separador01">
                 <h1>
-                    Dashboard
+                    {{ titulo }}
                 </h1>
                 <span>
                     Atualizado: 26/08/2025 ás 8:17
@@ -35,13 +35,21 @@
 
 <script setup>
 
+defineProps({
+  titulo: {
+    type: String,
+    required: true
+  }
+})
+
 </script>
 
 <style scoped>
 
 header {
     width: 100%;
-    padding: 20px 0 0 0;
+    padding: 20px 0 10px 0;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.3);
 }
 
 .cabecalho {
@@ -54,6 +62,11 @@ header {
 
 .separador01 > h1 {
     font-size: 32px;
+}
+
+.separador01 > span {
+    color: #909093;
+    font-size: 14px;
 }
 
 .separador02 {

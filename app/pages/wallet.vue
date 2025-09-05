@@ -1,6 +1,13 @@
 <template>
-  <h1>Página Wallet</h1>
+
+  <Header titulo="Wallet" />
+
 </template>
 
 <script setup>
+
 </script>
+
+<style scoped>
+
+</style>

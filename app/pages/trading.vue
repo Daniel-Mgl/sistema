@@ -1,6 +1,13 @@
 <template>
-  <h1>Página Trading</h1>
+
+  <Header titulo="Trading" />
+
 </template>
 
 <script setup>
+
 </script>
+
+<style scoped>
+
+</style>

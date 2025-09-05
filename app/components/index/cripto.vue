@@ -1,4 +1,7 @@
 <template>
+        <p>
+            Preços de hoje por capitalização de mercado
+        </p>    
         <div class="container-cripto">
            <div class="populares-cripto">
                 <div class="header-cripto">
@@ -75,19 +78,14 @@
 
             </div>
             <div class="historico-cripto">
-                <div class="header-cripto">
+                <div class="header-cripto header-cripto-historico">
                     <span>
-                        Populares
+                        Seu Histórico
                     </span>
 
-                    <div>
-                        <span>
-                            24h
-                        </span>
-                        <span>
-                            Em alta
-                        </span>
-                    </div>
+                    <span>
+                        Recentes
+                    </span>
                 </div>
 
                 <ul class="lista-cripto">
@@ -276,6 +274,11 @@
 
 <style scoped>
 
+p {
+    color: #A1A1A1;
+    margin-bottom: 10px;
+}
+
 .container-cripto {
     height: 100%;
     display: grid;
@@ -283,28 +286,28 @@
     'populares populares historico historico'
     'nivel     nivel     nivel     nivel'
     'mercado   mercado   mercado   mercado';
-    grid-template-rows: 1fr 50px 1fr;
+    grid-template-rows: 1fr 40px 1fr;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
 
 .populares-cripto {
-    border: 1px solid white;
     grid-area: populares;
     display: flex;
     flex-direction: column;
     gap: 10px;
     border-radius: 30px;
     padding: 10px 15px;
+    background-color: #151718;
 }
 .historico-cripto {
-    border: 1px solid white;
     grid-area: historico;
     display: flex;
     flex-direction: column;
     gap: 10px;
     border-radius: 30px;
     padding: 10px 15px;
+    background-color: #151718;
 }
 
 .header-cripto {
@@ -327,9 +330,18 @@
 }
 
 .header-cripto > div > span:nth-child(1) {
-    border: 1px solid white;
+    border: 1px solid #D34141;
     padding: 1px 5px;
     border-radius: 30px;
+}
+
+.header-cripto > div > span:nth-child(2) {
+    color: #77ED91;
+}
+
+.header-cripto-historico > span:nth-child(2) {
+    font-size: 12px;
+    color: #77ED91;
 }
 
 .lista-cripto {
@@ -340,13 +352,13 @@
 }
 
 .lista-cripto > li {
-    border: 1px solid white;
     border-radius: 50px;
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 10px;
+    background-color: #212325;
 }
 
 .lista-cripto > li > div {
@@ -358,6 +370,11 @@
 .lista-cripto > li > div > span:nth-child(4) {
     display: block;
     font-size: 10px;
+    color: #A1A1A1;
+}
+
+.lista-cripto > li > span {
+    color: #2DC24E;
 }
 
 .nivel-cripto {
@@ -376,7 +393,7 @@
     border: 1px solid white;
     background-color: black;
     color: white;
-    padding: 10px 15px;
+    padding: 5px 10px;
     border-radius: 30px;
 }
 
@@ -393,12 +410,17 @@
 .item-mercado > div:nth-child(1) > span:nth-child(3) {
     display: block;
     font-size: 10px;
+    color: #A1A1A1;
 }
 
 .item-mercado > div:nth-child(2) {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.item-mercado > div:nth-child(2) > span:nth-child(1) {
+    color: #2DC24E;
 }
 
 .item-mercado > div:nth-child(3) {
@@ -411,6 +433,13 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-size: 12px;
+}
+
+.item-mercado > div:nth-child(3) > div > span:nth-child(1) {
+    border: 1px solid #D34141;
+    border-radius: 30px;
+    padding: 1px 5px;
 }
 
 .item-mercado > div:nth-child(3) > button {
@@ -418,6 +447,10 @@
     padding: 10px 5px;
     border-radius: 30px;
     background-color: #77ED91;
+}
+
+@media (max-with: 500px) {
+
 }
 
 </style>

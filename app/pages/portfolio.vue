@@ -1,6 +1,18 @@
 <template>
-  <h1>Página Portfólio</h1>
+
+  <Header titulo="Portfólio" />
+  <Pontuacao />
+  <Tabela />
+
 </template>
 
 <script setup>
+
+import Pontuacao from '../components/portfolio/pontuacao.vue'
+import Tabela from '../components/portfolio/tabela.vue'
+
 </script>
+
+<style scoped>
+
+</style>

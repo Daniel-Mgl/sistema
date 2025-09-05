@@ -40,7 +40,7 @@ function toggleCss() {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 15px 0 15px 0;
 }
 
 .saldo-atual {
@@ -51,10 +51,11 @@ function toggleCss() {
 }
 
 .saldo-atual > span:nth-child(1) {
-  font-size: 13px;
+  font-size: 14px;
   display: flex;
   align-items: center;
   gap: 5px;
+  color: #E1E1E1;
 }
 
 .saldo-atual > span:nth-child(1) > button {

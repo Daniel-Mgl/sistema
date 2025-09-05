@@ -7,5 +7,6 @@ export default defineNuxtConfig({
   css: [
     '../app/assets/css/reset.css'
   ],
-})
 
+  modules: ['@nuxt/icon'],
+})
