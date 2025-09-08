@@ -6,6 +6,61 @@
   src: url(https://fonts.gstatic.com/s/akayakanadaka/v17/N0bM2S5CPO5oOQqvazoRRb-8-MfWQZQ.woff2) format('woff2'); 
 }
 
+@font-face {
+  font-family: 'ABeeZee';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/abeezee/v22/esDR31xSG-6AGleN2tWkkA.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Anuphan';
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/anuphan/v5/2sDeZGxYgY7LkLT0mWoDag.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Albert Sans';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/albertsans/v3/i7dOIFdwYjGaAMFtZd_QA1ZbYFc.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Catamaran';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/catamaran/v27/o-0IIpQoyXQa2RxT7-5r5TRA.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Anek Malayalam';
+  font-style: normal;
+  font-weight: 100 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/anekmalayalam/v17/6qLUKZActRTs_mZAJUZWWkhke0nYa_vC8_Azq3-gP1S7db9_.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Andika New Basic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/andikanewbasic/v18/taiRGn9tCp-44eleq5Q-mszJivxSeKieEQ.woff2) format('woff2');
+}
+
 :root {
-    --font-akaya: 'Akaya Kanadaka', cursive;
+  --font-akaya: 'Akaya Kanadaka', cursive;
+  --font-anuphan: "Anuphan", sans-serif;
+  --font-abeezee: "ABeeZee", sans-serif;
+  --font-albert-sans: "Albert Sans", sans-serif;
+  --font-catamaran: "Catamaran", sans-serif;
+  --font-anek: "Anek Malayalam", sans-serif;
+  --font-andika: 'Andika New Basic', sans-serif;
 }

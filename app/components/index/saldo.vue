@@ -56,6 +56,7 @@ function toggleCss() {
   align-items: center;
   gap: 5px;
   color: #E1E1E1;
+  font-family: var(--font-catamaran);
 }
 
 .saldo-atual > span:nth-child(1) > button {
@@ -73,6 +74,7 @@ function toggleCss() {
 
 .saldo-atual > span:nth-child(2) {
   font-size: 20px;
+  font-family: var(--font-abeezee);
 }
 
 .saldo-atual > span:nth-child(2) > span {
@@ -81,6 +83,7 @@ function toggleCss() {
   padding: 0 3px;
   background-color: transparent;
   border-radius: 3px;
+  font-family: var(--font-anek);
   transition: height 0.4s ease, background-color 0.3s ease;
 }
 
@@ -96,6 +99,7 @@ function toggleCss() {
   border-radius: 30px;
   cursor: pointer;
   background-color: #77ED91;
+  font-family: var(--font-akaya);
 }
 
 @media (max-width: 550px) {

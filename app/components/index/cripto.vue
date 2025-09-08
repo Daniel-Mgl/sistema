@@ -152,7 +152,7 @@
             </div>
             <div class="nivel-cripto">
                 <h2>
-                    Mercado Estratégicos
+                    Mercados Estratégicos
                 </h2>
                 <button>
                     Nível 1
@@ -313,6 +313,7 @@ const toggleHistorico = () => {
 
 .div01 > p {
     color: #A1A1A1;
+    font-family: var(--font-albert-sans);
 }
 
 .div01 > p > br {
@@ -364,6 +365,7 @@ const toggleHistorico = () => {
 
 .header-cripto > span {
     font-size: 22px;
+    font-family: var(--font-anuphan);
 }
 
 .header-cripto > div {
@@ -377,15 +379,19 @@ const toggleHistorico = () => {
     border: 1px solid #D34141;
     padding: 1px 5px;
     border-radius: 30px;
+    font-family: var(--font-abeezee);
 }
 
 .header-cripto > div > span:nth-child(2) {
     color: #77ED91;
+    font-family: var(--font-akaya);
+    font-size: 13px;
 }
 
 .header-cripto-historico > span:nth-child(2) {
-    font-size: 12px;
+    font-size: 15px;
     color: #77ED91;
+    font-family: var(--font-akaya);
 }
 
 .lista-cripto {
@@ -393,6 +399,7 @@ const toggleHistorico = () => {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     gap: 10px;
+    font-family: var(--font-abeezee);
 }
 
 .lista-cripto > li {
@@ -431,6 +438,7 @@ const toggleHistorico = () => {
 
 .nivel-cripto > h2 {
     color: white;
+    font-family: var(--font-andika);
 }
 
 .nivel-cripto > button {
@@ -439,6 +447,7 @@ const toggleHistorico = () => {
     color: white;
     padding: 5px 10px;
     border-radius: 30px;
+    font-family: var(--font-albert-sans);
 }
 
 .mercado-cripto {
@@ -491,6 +500,7 @@ const toggleHistorico = () => {
     padding: 10px 5px;
     border-radius: 30px;
     background-color: #77ED91;
+    font-family: var(--font-akaya);
 }
 
 @media (max-width: 550px) {

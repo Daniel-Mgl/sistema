@@ -91,11 +91,13 @@ header {
 
 .separador01 > div > h1 {
     font-size: 32px;
+    font-family: var(--font-abeezee);
 }
 
 .separador01 > span {
     color: #909093;
     font-size: 14px;
+    font-family: var(--font-abeezee);
 }
 
 .separador02 {
@@ -144,6 +146,10 @@ header {
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+.usuario > div:nth-child(2) > span {
+    font-family: var(--font-abeezee);
 }
 
 .usuario > div:nth-child(2) > span:nth-child(2) {

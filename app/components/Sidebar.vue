@@ -109,6 +109,7 @@ aside {
    color: white;
    overflow: hidden;
    border: 2px solid transparent;
+   font-family: var(--font-akaya);
    transition: all 1s;
 }
 
@@ -142,6 +143,7 @@ aside > .btn-sair-aside {
     padding: 0 3px 0 3px;
     margin: 0 0 0 30px;
     border-radius: 30px;
+    font-family: var(--font-abeezee);
     transition: all 1s;
 }
 
