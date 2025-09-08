@@ -1,9 +1,14 @@
 <template>
-        <p>
-            Preços de hoje por capitalização de mercado
-        </p>    
+        <div class="div01">
+            <p>
+                Preços de hoje por <br> capitalização de mercado
+            </p>
+            <button @click="toggleHistorico">
+                {{ mostrarHistorico ? 'Ver Populares' : 'Ver Histórico' }}
+            </button>
+        </div>   
         <div class="container-cripto">
-           <div class="populares-cripto">
+           <div class="populares-cripto" v-show="!isMobile || !mostrarHistorico">
                 <div class="header-cripto">
                     <span>
                         Populares
@@ -77,7 +82,7 @@
                 </ul>
 
             </div>
-            <div class="historico-cripto">
+            <div class="historico-cripto" v-show="!isMobile || mostrarHistorico">
                 <div class="header-cripto header-cripto-historico">
                     <span>
                         Seu Histórico
@@ -269,14 +274,53 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
 
+const mostrarHistorico = ref(false)
+const isMobile = ref(false)
+
+const checkMobile = () => {
+  isMobile.value = window.innerWidth <= 550
+  if (!isMobile.value) {
+    mostrarHistorico.value = false
+  }
+}
+
+onMounted(() => {
+  checkMobile()
+  window.addEventListener('resize', checkMobile)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', checkMobile)
+})
+
+const toggleHistorico = () => {
+  if (isMobile.value) {
+    mostrarHistorico.value = !mostrarHistorico.value
+  }
+}
 </script>
 
 <style scoped>
 
-p {
-    color: #A1A1A1;
+.div01 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 10px;
+}
+
+.div01 > p {
+    color: #A1A1A1;
+}
+
+.div01 > p > br {
+    display: none;
+}
+
+.div01 > button {
+    display: none;
 }
 
 .container-cripto {
@@ -286,7 +330,7 @@ p {
     'populares populares historico historico'
     'nivel     nivel     nivel     nivel'
     'mercado   mercado   mercado   mercado';
-    grid-template-rows: 1fr 40px 1fr;
+    grid-template-rows: 1fr 30px 1fr;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
@@ -449,7 +493,81 @@ p {
     background-color: #77ED91;
 }
 
-@media (max-with: 500px) {
+@media (max-width: 550px) {
+
+    .div01 > p > br {
+        display: block;
+    }
+
+    .div01 > button {
+        display: block;
+        padding: 7px;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .container-cripto {
+        grid-template-areas:
+    'cripto    cripto    cripto    cripto'
+    'nivel     nivel     nivel     nivel'
+    'mercado   mercado   mercado   mercado';
+    }
+
+    .populares-cripto {
+        grid-area: cripto;
+    }
+
+    .historico-cripto {
+        grid-area: cripto;
+    }
+
+    .header-cripto > div > span {
+        font-size: 10px;
+    }
+
+    .header-cripto > span {
+        font-size: 20px;
+    }
+
+    .lista-cripto > li > div > span {
+        font-size: 14px;
+    }
+
+    .lista-cripto > li > span {
+        font-size: 14px;
+    }
+
+    .nivel-cripto > h2 {
+        font-size: 20px;
+    }
+
+    .item-mercado > div > span {
+        font-size: 14px;
+    } 
+
+    .item-mercado > div:nth-child(2) {
+        gap: 0px;
+    }
+
+    .item-mercado > div:nth-child(3) > div > span {
+        font-size: 11px;
+    }
+
+    .item-mercado > div:nth-child(3) {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .item-mercado > div:nth-child(3) > div {
+        flex-direction: row-reverse;
+        gap: 3px;
+    }
+
+    .item-mercado > div:nth-child(3) > button {
+        padding: 4px 5px;
+        font-size: 13px;
+    }
 
 }
 

@@ -34,7 +34,7 @@ section {
 
   section {
     position: fixed;
-    padding-left: 75px;
+    padding: 10px 10px 10px 65px;
     z-index: 1;
   }
 

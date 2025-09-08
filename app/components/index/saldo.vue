@@ -40,7 +40,7 @@ function toggleCss() {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 0 15px 0;
+  padding: 15px 0;
 }
 
 .saldo-atual {
@@ -96,6 +96,18 @@ function toggleCss() {
   border-radius: 30px;
   cursor: pointer;
   background-color: #77ED91;
+}
+
+@media (max-width: 550px) {
+
+  .container-saldo > div {
+    padding: 10px 0;
+  }
+
+  .container-saldo > div > button {
+    padding: 8px 10px;
+  }
+
 }
 
 </style>

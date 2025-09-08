@@ -4,15 +4,22 @@
         <div class="cabecalho">
 
             <div class="separador01">
-                <h1>
-                    {{ titulo }}
-                </h1>
+                <div>
+                    <h1>
+                        {{ titulo }}
+                    </h1>
+
+                    <div v-if="extra">
+                        {{ extra }}
+                    </div>
+                </div>
                 <span>
-                    Atualizado: 26/08/2025 ás 8:17
+                    <strong>Atualizado:</strong>
+                    26/08/2025 ás 8:17
                 </span>
             </div>
 
-            <div class="separador02">
+            <div v-if="!hideUser" class="separador02">
                <button class="btn-notificacao">
                     <img src="../assets/img/img-index/notification-bing.png" alt="Icone sino de notificação">
                     <span></span>
@@ -21,10 +28,12 @@
                     <div class="foto-usuario">
                         
                     </div>
-                    <span>
-                        Administrador
-                    </span>
-                    <span>></span>
+                    <div>
+                        <span>
+                            Administrador
+                        </span>
+                        <span>></span>
+                    </div>
                </div>
             </div>
 
@@ -39,6 +48,14 @@ defineProps({
   titulo: {
     type: String,
     required: true
+  },
+  extra: {
+     type: String,
+     required: false
+  },
+  hideUser: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -60,7 +77,19 @@ header {
     color: white;
 }
 
-.separador01 > h1 {
+.separador01 > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.separador01 > div > div {
+    background-color: #F92727;
+    padding: 3px 5px;
+    border-radius: 30px;
+}
+
+.separador01 > div > h1 {
     font-size: 32px;
 }
 
@@ -111,12 +140,61 @@ header {
     border-radius: 50%;
 }
 
-.usuario > span:nth-child(2) {
+.usuario > div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.usuario > div:nth-child(2) > span:nth-child(2) {
     font-size: 17px;
 }
 
 .usuario > span:nth-child(3) {
     transform: rotate(90deg);
+}
+
+@media (max-width: 550px) {
+
+    .separador01 > div {
+        padding: 0;
+    }
+
+    .separador01 > div > h1 {
+        font-size: 25px;
+    }
+
+    .separador01 > span {
+        display: flex;
+        flex-direction: column;
+        line-height: 13px;
+    }
+
+    .separador01 > span > br {
+        display: block;
+        line-height: px;
+    }
+
+    .separador02 {
+        position: relative;
+    }
+
+    .btn-notificacao {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .usuario {
+        flex-direction: column;
+        align-items: start;
+        gap: 2px;
+    }
+
+    .foto-usuario {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 </style>
