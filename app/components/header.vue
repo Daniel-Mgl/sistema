@@ -65,12 +65,11 @@ defineProps({
 
 header {
     width: 100%;
-    padding: 20px 0 10px 0;
+    padding: 0 0 10px 0;
     border-bottom: 1px solid rgb(255, 255, 255, 0.3);
 }
 
 .cabecalho {
-    height: 58px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -87,6 +86,7 @@ header {
     background-color: #F92727;
     padding: 3px 5px;
     border-radius: 30px;
+    font-family: var(--font-anonymous);
 }
 
 .separador01 > div > h1 {
@@ -163,7 +163,16 @@ header {
 @media (max-width: 550px) {
 
     .separador01 > div {
+        width: fit-content;
+        align-items: start;
+        flex-direction: column;
+        gap: 0;
         padding: 0;
+    }
+
+    .separador01 > div > div {
+        margin: 5px 0;
+        font-size: 14px;
     }
 
     .separador01 > div > h1 {
@@ -173,12 +182,11 @@ header {
     .separador01 > span {
         display: flex;
         flex-direction: column;
-        line-height: 13px;
+        line-height: 15px;
     }
 
     .separador01 > span > br {
         display: block;
-        line-height: px;
     }
 
     .separador02 {

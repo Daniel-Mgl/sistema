@@ -27,7 +27,7 @@ section {
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 20px 30px 20px;
+  padding: 20px;
 }
 
 @media (max-width: 800px) {

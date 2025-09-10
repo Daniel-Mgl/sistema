@@ -511,10 +511,12 @@ const toggleHistorico = () => {
 
     .div01 > button {
         display: block;
-        padding: 7px;
+        width: 85px;
+        padding: 7px 0;
         border-radius: 30px;
         border: none;
         cursor: pointer;
+        font-family: var(--font-akaya);
     }
 
     .container-cripto {

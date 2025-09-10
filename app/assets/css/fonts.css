@@ -55,6 +55,47 @@
   src: url(https://fonts.gstatic.com/s/andikanewbasic/v18/taiRGn9tCp-44eleq5Q-mszJivxSeKieEQ.woff2) format('woff2');
 }
 
+@font-face {
+  font-family: 'ADLaM Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/adlamdisplay/v1/KFOhCnGXkPOLlhx6jD8_b1ZEOsbSkA.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Afacad';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/afacad/v3/6NUX8FKMIQOGaw6agawK.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Anonymous Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/anonymouspro/v22/rP2cp2a15UIB7Un-bOeISG3pFuAT4C7c7Q.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmsans/v16/rP2Hp2ywxg089UriCZOIHQ.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v49/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2) format('woff2');
+}
+
 :root {
   --font-akaya: 'Akaya Kanadaka', cursive;
   --font-anuphan: "Anuphan", sans-serif;
@@ -63,4 +104,9 @@
   --font-catamaran: "Catamaran", sans-serif;
   --font-anek: "Anek Malayalam", sans-serif;
   --font-andika: 'Andika New Basic', sans-serif;
+  --font-adlam: "ADLaM Display", system-ui;
+  --font-afacad: "Afacad", sans-serif;
+  --font-anonymous: "Anonymous Pro", monospace;
+  --font-dm-sans: "DM Sans", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
 }

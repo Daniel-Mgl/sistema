@@ -37,6 +37,7 @@ div > button {
     color: white;
     background-color: #1A1D1E;
     cursor: pointer;
+    font-family: var(--font-abeezee);
 }
 
 </style>

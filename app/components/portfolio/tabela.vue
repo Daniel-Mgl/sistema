@@ -20,7 +20,7 @@
                         Nivel 3
                     </th>
                     <th>
-                        Nivel 4
+                        Total
                     </th>
                 </tr>
             </thead>
@@ -44,7 +44,7 @@
                 </tr>
                 <tr>
                     <td>
-                        Número de Investidores
+                        Número de <br> Investidores
                     </td>
                     <td>
                         $1.00
@@ -61,7 +61,7 @@
                 </tr>
                 <tr>
                     <td>
-                        Número de Depositantes
+                        Número de <br> Depositantes
                     </td>
                     <td>
                         $1.00
@@ -78,7 +78,7 @@
                 </tr>
                 <tr>
                     <td>
-                        Usuários Registrados
+                        Usuários <br> Registrados
                     </td>
                     <td>
                         $1.00
@@ -109,6 +109,7 @@ h3 {
     color: white;
     font-size: 25px;
     margin-bottom: 10px;
+    font-family: var(--font-abeezee);
 }
 
 table {
@@ -121,12 +122,50 @@ table {
 thead {
     height: 40px;
     background-color: #1A1D1E;
+    font-family: var(--font-akaya);
 }
 
 th, td {
     border: 1px solid rgba(255, 255, 255, 0.1);
     text-align: left;
     padding-left: 10px;
+}
+
+td {
+    font-family: var(--font-abeezee);
+}
+
+td > br {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    h3 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    thead {
+        height: 30px;
+    }
+
+    table {
+        height: 235px;
+    }
+
+    th, td {
+        font-size: 13px;
+    }
+
+    td {
+        font-size: 11px;
+    }
+
+    td > br {
+        display: block;
+    }
+
 }
 
 </style>
