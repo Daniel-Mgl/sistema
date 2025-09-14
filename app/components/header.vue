@@ -44,20 +44,20 @@
 
 <script setup>
 
-defineProps({
-  titulo: {
-    type: String,
-    required: true
-  },
-  extra: {
-     type: String,
-     required: false
-  },
-  hideUser: {
-    type: Boolean,
-    default: false
-  }
-})
+    defineProps({
+    titulo: {
+        type: String,
+        required: true
+    },
+    extra: {
+        type: String,
+        required: false
+    },
+    hideUser: {
+        type: Boolean,
+        default: false
+    }
+    });
 
 </script>
 
