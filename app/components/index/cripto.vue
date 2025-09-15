@@ -191,7 +191,7 @@
                                     Prazo
                                 </span>
                             </div>
-                            <button>
+                            <button @click="abrirModal">
                                 Comprar Agora
                             </button>
                         </div>
@@ -227,7 +227,7 @@
                                     Prazo
                                 </span>
                             </div>
-                            <button>
+                            <button @click="abrirModal">
                                 Comprar Agora
                             </button>
                         </div>
@@ -263,21 +263,28 @@
                                     Prazo
                                 </span>
                             </div>
-                            <button>
+                            <button @click="abrirModal">
                                 Comprar Agora
                             </button>
                         </div>
                     </li>
                 </ul>
             </div>
+            <ComprarCripto v-if="mostrarComprar" @fechar="mostrarComprar = false" />
         </div>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import ComprarCripto from '~/components/index/comprar-cripto.vue'
 
 const mostrarHistorico = ref(false)
 const isMobile = ref(false)
+const mostrarComprar = ref(false)
+
+function abrirModal() {
+  mostrarComprar.value = true
+}
 
 const checkMobile = () => {
   isMobile.value = window.innerWidth <= 550
