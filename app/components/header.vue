@@ -32,7 +32,7 @@
                         <span>
                             Administrador
                         </span>
-                        <span>></span>
+                        <img src="../assets/img/seta-branca.svg" alt="">
                     </div>
                </div>
             </div>
@@ -86,18 +86,18 @@ header {
     background-color: #F92727;
     padding: 3px 5px;
     border-radius: 30px;
-    font-family: var(--font-anonymous);
+    font-family: var(--font-figtree);
 }
 
 .separador01 > div > h1 {
     font-size: 32px;
-    font-family: var(--font-abeezee);
+    font-family: var(--font-montserrat);
 }
 
 .separador01 > span {
     color: #909093;
     font-size: 14px;
-    font-family: var(--font-abeezee);
+    font-family: var(--font-figtree);
 }
 
 .separador02 {
@@ -149,11 +149,12 @@ header {
 }
 
 .usuario > div:nth-child(2) > span {
-    font-family: var(--font-abeezee);
+    font-family: var(--font-figtree);
 }
 
-.usuario > div:nth-child(2) > span:nth-child(2) {
-    font-size: 17px;
+.usuario > div:nth-child(2) > img {
+    width: 10px;
+    transform: rotate(90deg);
 }
 
 .usuario > span:nth-child(3) {
@@ -209,6 +210,18 @@ header {
         width: 40px;
         height: 40px;
     }
+}
+
+@media (max-width: 350px) {
+
+    .separador01 > div > h1 {
+        font-size: 20px;
+    }
+
+    .separador01 > span {
+        font-size: 13px;
+    }
+
 }
 
 </style>

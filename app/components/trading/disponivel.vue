@@ -41,7 +41,8 @@
 
 .container-disponivel > h2 {
     font-size: 26px;
-    font-family: var(--font-dm-sans);
+    font-family: var(--font-montserrat);
+    font-weight: 600;
 }
 
 .container-disponivel > div:nth-child(2) {
@@ -49,7 +50,7 @@
     width: fit-content;
     padding: 5px 8px;
     border-radius: 30px;
-    font-family: var(--font-anonymous);
+    font-family: var(--font-figtree);
 }
 
 .container-disponivel > div:nth-child(2) > p > br {
@@ -57,7 +58,9 @@
 }
 
 .container-disponivel > div:nth-child(3) > p {
-    font-family: var(--font-abeezee);
+    font-family: var(--font-montserrat);
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .container-disponivel > div:nth-child(3) > p > span {

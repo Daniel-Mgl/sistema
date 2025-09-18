@@ -109,7 +109,8 @@ h3 {
     color: white;
     font-size: 25px;
     margin-bottom: 10px;
-    font-family: var(--font-abeezee);
+    font-family: var(--font-montserrat);
+    font-weight: 500;
 }
 
 table {
@@ -122,7 +123,7 @@ table {
 thead {
     height: 40px;
     background-color: #1A1D1E;
-    font-family: var(--font-akaya);
+    font-family: var(--font-figtree);
 }
 
 th, td {
@@ -132,7 +133,7 @@ th, td {
 }
 
 td {
-    font-family: var(--font-abeezee);
+    font-family: var(--font-anek);
 }
 
 td > br {

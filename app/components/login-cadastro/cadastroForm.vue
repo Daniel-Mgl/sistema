@@ -67,11 +67,17 @@
     border-radius: 10px;
   }
 
+  form > h1 {
+    font-family: var(--font-montserrat);
+    font-weight: 500;
+  }
+
   .form-group {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 5px;
+    font-family: var(--font-figtree);
   }
 
   .form-group > input {
@@ -80,6 +86,7 @@
     border: 1px solid black;
     padding-left: 5px;
     font-size: 16px;
+    font-family: var(--font-figtree);
   }
 
   .btn-form-cadastro {
@@ -90,6 +97,7 @@
     border-radius: 30px;
     font-size: 17px;
     cursor: pointer;
+    font-family: var(--font-figtree);
   }
 
   .login {
@@ -110,6 +118,7 @@
     border-radius: 5px;
     font-size: 15px;
     color: black;
+    font-family: var(--font-figtree);
   }
 
 </style>

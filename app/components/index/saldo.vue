@@ -1,30 +1,35 @@
 <template>
-    <div class="container-saldo">
-          <div>
-             <div class="saldo-atual">
-                  <span>
-                      Saldo Atual
-                      <button @click="toggleCss">
-                      </button>
-                  </span>
-                  <span>
-                    Disponível
-                    <span :class="{ oculto: ativarCss}">
-                      0
-                    </span>
-                  </span>
-             </div>
-              <button>
-                  + Add Fundos
-              </button>
-      
-          </div>
+  <div class="container-saldo">
+    <div>
+      <div class="saldo-atual">
+        <span>
+          Saldo Atual
+          <button @click="toggleCss">
+            <img :src="ativarCss ? olhoFechado : olhoAberto" alt="ícone olho" />
+          </button>
+        </span>
+        <span>
+          Disponível
+        <span :class="{ oculto: ativarCss}">
+          0
+        </span>
+        </span>
       </div>
+
+        <button>
+          + Add Fundos
+        </button>
+      
+    </div>
+  </div>
 </template>
 
 <script setup>
 
 import { ref } from 'vue'
+
+import olhoAberto from '@/assets/img/img-index/icone-olho-aberto.svg'
+import olhoFechado from '@/assets/img/img-index/icone-olho-fechado.svg'
 
 const ativarCss = ref(false)
 
@@ -56,25 +61,24 @@ function toggleCss() {
   align-items: center;
   gap: 5px;
   color: #E1E1E1;
-  font-family: var(--font-catamaran);
+  font-family: var(--font-figtree);
 }
 
 .saldo-atual > span:nth-child(1) > button {
-  width: 20px;
-  height: 10px;
+  background-color: transparent;
+  border: none;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid white;
-  color: white;
-  background-color: black;
-  border-radius: 50%;
   cursor: pointer;
+}
+
+.saldo-atual > span:nth-child(1) > button > img {
+  width: 20px;
 }
 
 .saldo-atual > span:nth-child(2) {
   font-size: 20px;
-  font-family: var(--font-abeezee);
+  font-family: var(--font-montserrat);
+  font-weight: 500;
 }
 
 .saldo-atual > span:nth-child(2) > span {
@@ -99,7 +103,7 @@ function toggleCss() {
   border-radius: 30px;
   cursor: pointer;
   background-color: #77ED91;
-  font-family: var(--font-akaya);
+  font-family: var(--font-figtree);
 }
 
 @media (max-width: 550px) {

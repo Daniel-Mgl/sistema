@@ -6,7 +6,7 @@
 
         <div class="div-btn-seta-aside" :class="{ ativo: isActive }">
             <button class="btn-seta-aside" @click="toggleAside" :class="{ ativo: isActive }">
-                <
+                <img src="../assets/img/seta.svg" alt="">
             </button>
         </div>
 
@@ -109,7 +109,7 @@ aside {
    color: white;
    overflow: hidden;
    border: 2px solid transparent;
-   font-family: var(--font-akaya);
+   font-family: var(--font-montserrat);
    transition: all 1s;
 }
 
@@ -143,17 +143,13 @@ aside > .btn-sair-aside {
     padding: 0 3px 0 3px;
     margin: 0 0 0 30px;
     border-radius: 30px;
-    font-family: var(--font-abeezee);
+    font-family: var(--font-figtree);
     transition: all 1s;
 }
 
-aside > .btn-sair-aside:hover {
+.btn-sair-aside:hover {
     border: 1px solid white;
     border-radius: 30px;
-}
-
-.div-btn-seta-aside {
-    transition: all 1s;
 }
 
 .btn-sair-aside {
@@ -193,6 +189,11 @@ aside > .btn-sair-aside:hover {
         border-radius: 50%;
         border: none;
         transition: all 1s;
+        cursor: pointer;
+    }
+
+    .btn-seta-aside > img {
+        width: 25px;
     }
 
     .btn-seta-aside.ativo {

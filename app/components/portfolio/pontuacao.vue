@@ -103,7 +103,7 @@ import medalha from '../../assets/img/img-portfolio/medalha.png'
 }
 
 .container-pontuacao > div:nth-child(1) > div:nth-child(1) > ul > li > span {
-    font-family: var(--font-adlam);
+    font-family: var(--font-anek);
 }
 
 .container-pontuacao > div:nth-child(1) > div:nth-child(1) > ul > li > span:nth-child(1) {
@@ -112,7 +112,7 @@ import medalha from '../../assets/img/img-portfolio/medalha.png'
 
 .container-pontuacao > div:nth-child(1) > div:nth-child(1) > ul > li > span:nth-child(3) {
     font-size: 14px;
-    font-family: var(--font-afacad);
+    font-family: var(--font-figtree);
 }
 
 .container-pontuacao > div:nth-child(1) > div:nth-child(1) > img {
@@ -131,7 +131,7 @@ import medalha from '../../assets/img/img-portfolio/medalha.png'
 .container-pontuacao > div:nth-child(1) > ul > li {
     display: flex;
     flex-direction: column;
-    font-family: var(--font-abeezee);
+    font-family: var(--font-figtree);
 }
 
 .container-pontuacao > div:nth-child(1) > ul > li > span:nth-child(1) {
@@ -152,7 +152,7 @@ import medalha from '../../assets/img/img-portfolio/medalha.png'
     height: 40px;
     border-radius: 30px;
     font-size: 17px;
-    font-family: var(--font-abeezee);
+    font-family: var(--font-figtree);
 }
 
 .container-pontuacao > div:nth-child(2) > button:nth-child(2) {
@@ -163,7 +163,7 @@ import medalha from '../../assets/img/img-portfolio/medalha.png'
     margin-left: auto;
     font-size: 17px;
     background-color: #A29CFF;
-    font-family: var(--font-abeezee);
+    font-family: var(--font-figtree);
 }
 
 @media (max-width: 1150px) {
@@ -188,11 +188,11 @@ import medalha from '../../assets/img/img-portfolio/medalha.png'
     }
 
     .container-pontuacao > div:nth-child(1) > ul > li > span:nth-child(1) {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .container-pontuacao > div:nth-child(1) > ul > li > span:nth-child(2) {
-        font-size: 13px;
+        font-size: 15px;
     }
     
 }

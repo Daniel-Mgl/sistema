@@ -86,6 +86,7 @@ defineEmits(['fechar'])
     width: 100%;
     border-radius: 20px;
     box-shadow: 0 0 10px #77ed90;
+    font-family: var(--font-figtree);
 }
 
 .comprar-cripto > div:nth-child(1) {
@@ -123,6 +124,7 @@ defineEmits(['fechar'])
     border: none;
     border-radius: 30px;
     cursor: pointer;
+    font-family: var(--font-figtree);
 }
 
 .comprar-cripto > div:nth-child(2) > span:nth-child(2) {
@@ -148,6 +150,14 @@ defineEmits(['fechar'])
     border-radius: 30px;
 }
 
+.item-quantidade > span:nth-child(2) {
+    font-family: var(--font-anek);
+}
+
+.item-quantidade > div > span:nth-child(2) {
+    font-family: var(--font-anek);
+}
+
 .comprar-cripto > div:nth-child(2) > div:nth-child(3) > ul > li:nth-child(2) > div > span:nth-child(1) {
     color: red;
     font-size: 14px;
@@ -155,6 +165,11 @@ defineEmits(['fechar'])
 
 .comprar-cripto > div:nth-child(2) > div:nth-child(3) > ul > li:nth-child(3) > input {
     width: 100%;
+    cursor: grab;
+}
+
+.comprar-cripto > div:nth-child(2) > div:nth-child(3) > ul > li:nth-child(3) > input:active {
+    cursor: grabbing;
 }
 
 .comprar-cripto > div:nth-child(3) {
@@ -174,6 +189,10 @@ defineEmits(['fechar'])
     border-radius: 30px;
 }
 
+.comprar-cripto > div:nth-child(3) > div > span:nth-child(2) {
+    font-family: var(--font-anek);
+}
+
 .comprar-cripto > div:nth-child(3) > button {
     width: 100%;
     max-width: 200px;
@@ -181,6 +200,7 @@ defineEmits(['fechar'])
     border-radius: 30px;
     border: none;
     cursor: pointer;
+    font-family: var(--font-figtree);
 }
 
 @media (max-width: 800px) {

@@ -47,7 +47,8 @@
 }
 
 .container-carteira > h2 {
-    font-family: var(--font-roboto);
+    font-family: var(--font-montserrat);
+    font-weight: 600;
 }
 
 .container-carteira > div:nth-child(2) {
@@ -55,15 +56,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: var(--font-roboto);
+    font-family: var(--font-anek);
 }
 
 .container-carteira > div:nth-child(2) > span:nth-child(1) {
-    font-size: 36px;
+    font-size: 35px;
 }
 
 .container-carteira > div:nth-child(2) > span:nth-child(2) {
-    font-size: 14px;
+    font-size: 15px;
     color: #5ECCA3;
 }
 
@@ -81,7 +82,7 @@
     color: white;
     background-color: #279646;
     cursor: pointer;
-    font-family: var(--font-roboto);
+    font-family: var(--font-figtree);
 }
 
 @media (max-width: 600px) {

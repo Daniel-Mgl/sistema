@@ -25,58 +25,22 @@
                 </div>
 
                 <ul class="lista-cripto">
-                    <li>
+                    <li v-for="moeda in moedas" :key="moeda.id">
                         <div>
                             <span>
-                                1
+                                {{ moeda.id }}
                             </span>
                             <img src="" alt="">
                             <span>
-                                Tether
+                                {{ moeda.nome }}
                             </span>
                             <span>
-                                USDT
+                                {{ moeda.sigla }}
                             </span>
                         </div>
 
                         <span>
-                            +0,40%
-                        </span>
-                    </li>
-                    <li>
-                        <div>
-                            <span>
-                                1
-                            </span>
-                            <img src="" alt="">
-                            <span>
-                                Tether
-                            </span>
-                            <span>
-                                USDT
-                            </span>
-                        </div>
-
-                        <span>
-                            +0,40%
-                        </span>
-                    </li>
-                    <li>
-                        <div>
-                            <span>
-                                1
-                            </span>
-                            <img src="" alt="">
-                            <span>
-                                Tether
-                            </span>
-                            <span>
-                                USDT
-                            </span>
-                        </div>
-
-                        <span>
-                            +0,40%
+                            {{ moeda.valor }}
                         </span>
                     </li>
                 </ul>
@@ -278,6 +242,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import ComprarCripto from '~/components/index/comprar-cripto.vue'
 
+const { data: moedas } = await useFetch('/api/moedas')
 const mostrarHistorico = ref(false)
 const isMobile = ref(false)
 const mostrarComprar = ref(false)
@@ -320,7 +285,7 @@ const toggleHistorico = () => {
 
 .div01 > p {
     color: #A1A1A1;
-    font-family: var(--font-albert-sans);
+    font-family: var(--font-figtree);
 }
 
 .div01 > p > br {
@@ -372,7 +337,8 @@ const toggleHistorico = () => {
 
 .header-cripto > span {
     font-size: 22px;
-    font-family: var(--font-anuphan);
+    font-family: var(--font-montserrat);
+    font-weight: 500;
 }
 
 .header-cripto > div {
@@ -386,19 +352,19 @@ const toggleHistorico = () => {
     border: 1px solid #D34141;
     padding: 1px 5px;
     border-radius: 30px;
-    font-family: var(--font-abeezee);
+    font-family: var(--font-figtree);
 }
 
 .header-cripto > div > span:nth-child(2) {
     color: #77ED91;
-    font-family: var(--font-akaya);
+    font-family: var(--font-figtree);
     font-size: 13px;
 }
 
 .header-cripto-historico > span:nth-child(2) {
     font-size: 15px;
     color: #77ED91;
-    font-family: var(--font-akaya);
+    font-family: var(--font-figtree);
 }
 
 .lista-cripto {
@@ -406,7 +372,7 @@ const toggleHistorico = () => {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     gap: 10px;
-    font-family: var(--font-abeezee);
+    font-family: var(--font-figtree);
 }
 
 .lista-cripto > li {
@@ -433,6 +399,7 @@ const toggleHistorico = () => {
 
 .lista-cripto > li > span {
     color: #2DC24E;
+    font-family: var(--font-anek);
 }
 
 .nivel-cripto {
@@ -445,7 +412,9 @@ const toggleHistorico = () => {
 
 .nivel-cripto > h2 {
     color: white;
-    font-family: var(--font-andika);
+    font-family: var(--font-montserrat);
+    font-weight: 500;
+    font-size: 23px;
 }
 
 .nivel-cripto > button {
@@ -454,7 +423,7 @@ const toggleHistorico = () => {
     color: white;
     padding: 5px 10px;
     border-radius: 30px;
-    font-family: var(--font-albert-sans);
+    font-family: var(--font-figtree);
 }
 
 .mercado-cripto {
@@ -481,6 +450,7 @@ const toggleHistorico = () => {
 
 .item-mercado > div:nth-child(2) > span:nth-child(1) {
     color: #2DC24E;
+    font-family: var(--font-anek);
 }
 
 .item-mercado > div:nth-child(3) {
@@ -494,6 +464,7 @@ const toggleHistorico = () => {
     align-items: center;
     flex-direction: column;
     font-size: 12px;
+    font-family: var(--font-figtree);
 }
 
 .item-mercado > div:nth-child(3) > div > span:nth-child(1) {
@@ -507,7 +478,8 @@ const toggleHistorico = () => {
     padding: 10px 5px;
     border-radius: 30px;
     background-color: #77ED91;
-    font-family: var(--font-akaya);
+    font-family: var(--font-figtree);
+    cursor: pointer;
 }
 
 @media (max-width: 550px) {
@@ -518,12 +490,12 @@ const toggleHistorico = () => {
 
     .div01 > button {
         display: block;
-        width: 85px;
+        width: 90px;
         padding: 7px 0;
         border-radius: 30px;
         border: none;
         cursor: pointer;
-        font-family: var(--font-akaya);
+        font-family: var(--font-figtree);
     }
 
     .container-cripto {
